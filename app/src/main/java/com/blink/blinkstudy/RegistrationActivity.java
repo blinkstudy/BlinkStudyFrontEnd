@@ -1,4 +1,4 @@
-package com.example.felix6280.study;
+package com.blink.blinkstudy;
 
 import android.app.Activity;
 import android.content.Intent;

@@ -1,4 +1,4 @@
-package com.example.felix6280.study;
+package com.blink.blinkstudy;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -10,7 +10,7 @@ public class SplashActivity extends Activity {
         super.onCreate(savedInstanceState);
 
         try{
-            Thread.sleep(1000); //나중에 시간 조정
+            Thread.sleep(4000); //나중에 시간 조정
         }catch (InterruptedException e) {
             e.printStackTrace();
         }
