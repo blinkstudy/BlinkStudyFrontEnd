@@ -19,7 +19,7 @@
             android:src="@drawable/moon" />
 
         <EditText
-            android:id="@+id/ID"
+            android:id="@+id/registID"
             android:layout_width="270dp"
             android:layout_height="50dp"
             android:layout_marginLeft="45dp"
@@ -32,11 +32,11 @@
             android:textColor="@color/colorPrimaryDark"/>
 
         <EditText
-            android:id="@+id/Password"
+            android:id="@+id/registPassword"
             android:layout_width="270dp"
             android:layout_height="50dp"
-            android:layout_alignLeft="@id/ID"
-            android:layout_below="@id/ID"
+            android:layout_alignLeft="@id/registID"
+            android:layout_below="@id/registID"
             android:layout_marginTop="10dp"
             android:background="@drawable/round_textfield"
             android:paddingLeft="10dp"
@@ -50,8 +50,8 @@
             android:id="@+id/PasswordConfirm"
             android:layout_width="270dp"
             android:layout_height="50dp"
-            android:layout_alignLeft="@id/Password"
-            android:layout_below="@id/Password"
+            android:layout_alignLeft="@id/registPassword"
+            android:layout_below="@id/registPassword"
             android:layout_marginTop="10dp"
             android:background="@drawable/round_textfield"
             android:paddingLeft="10dp"
@@ -62,14 +62,14 @@
             android:inputType="textPassword"/>
 
         <Button
-            android:id="@+id/registBtn"
+            android:id="@+id/nextBtn"
             android:layout_width="270dp"
             android:layout_height="50dp"
-            android:layout_alignLeft="@id/Password"
+            android:layout_alignLeft="@id/registPassword"
             android:layout_below="@id/PasswordConfirm"
             android:layout_marginTop="10dp"
             android:background="@drawable/roundbutton"
-            android:text="회원가입"
+            android:text="다음"
             android:textSize="15dp"
             android:textColor="@color/colorPrimaryDark"/>
 
