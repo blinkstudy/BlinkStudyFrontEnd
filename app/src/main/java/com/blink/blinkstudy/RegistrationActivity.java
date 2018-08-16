@@ -40,11 +40,42 @@ public class RegistrationActivity extends Activity{
                 String confirm = passwordConfirm.getText().toString();
 
                 if(original.equals(confirm)) {
-                    password.setTextColor(Color.GREEN);
-                    passwordConfirm.setTextColor(Color.GREEN);
+                    password.setTextColor(Color.parseColor("#009900"));
+                    passwordConfirm.setTextColor(Color.parseColor("#009900"));
+                } else if(original.length() > 0 && confirm.length() > 0) {
+                    password.setTextColor(Color.parseColor("#F93232"));
+                    passwordConfirm.setTextColor(Color.parseColor("#F93232"));
                 } else {
-                    password.setTextColor(Color.RED);
-                    passwordConfirm.setTextColor(Color.RED);
+                    password.setTextColor(Color.BLACK);
+                    passwordConfirm.setTextColor(Color.BLACK);
+                }
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+            }
+        });
+        password.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                String original = password.getText().toString();
+                String confirm = passwordConfirm.getText().toString();
+
+                if(original.equals(confirm)) {
+                    password.setTextColor(Color.parseColor("#009900"));
+                    passwordConfirm.setTextColor(Color.parseColor("#009900"));
+                } else if(original.length() > 0 && confirm.length() > 0) {
+                    password.setTextColor(Color.parseColor("#F93232"));
+                    passwordConfirm.setTextColor(Color.parseColor("#F93232"));
+                } else {
+                    password.setTextColor(Color.BLACK);
+                    passwordConfirm.setTextColor(Color.BLACK);
                 }
             }
 
@@ -73,6 +104,15 @@ public class RegistrationActivity extends Activity{
                 if( passwordConfirm.getText().toString().length() == 0 ) {
                     Toast.makeText(RegistrationActivity.this, "비밀번호 확인을 입력하세요", Toast.LENGTH_SHORT).show();
                     passwordConfirm.requestFocus();
+                    return;
+                }
+
+                if( !password.getText().toString().equals(passwordConfirm.getText().toString())) {
+                    Toast.makeText(RegistrationActivity.this, "비밀번호가 일치하지 않습니다", Toast.LENGTH_SHORT).show();
+                    passwordConfirm.setText("");
+                    password.setText("");
+                    passwordConfirm.setTextColor(Color.BLACK);
+                    password.setTextColor(Color.BLACK);
                     return;
                 }
             }
