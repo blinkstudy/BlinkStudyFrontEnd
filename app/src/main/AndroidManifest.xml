@@ -28,11 +28,16 @@
             android:screenOrientation="portrait">
         </activity>
 
+        <!-- Registration Activity -->
         <activity
             android:name="RegistrationActivity"
             android:screenOrientation="portrait">
         </activity>
 
+        <!-- Select Category Activity -->
+        <activity android:name="SelectCategoryActivity"
+            android:screenOrientation="portrait">
+        </activity>
 
     </application>
 

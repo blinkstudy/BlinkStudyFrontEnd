@@ -1,6 +1,7 @@
 package com.blink.blinkstudy;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.text.Editable;
@@ -115,6 +116,8 @@ public class RegistrationActivity extends Activity{
                     password.setTextColor(Color.BLACK);
                     return;
                 }
+
+                startActivity(new Intent(RegistrationActivity.this, SelectCategoryActivity.class));
             }
         });
     }
