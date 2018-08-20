@@ -18,6 +18,61 @@
             android:layout_marginTop="60dp"
             android:src="@drawable/moon" />
 
+        <EditText
+            android:id="@+id/registID"
+            android:layout_width="270dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="45dp"
+            android:layout_marginTop="320dp"
+            android:background="@drawable/round_textfield"
+            android:paddingLeft="10dp"
+            android:hint="ID(Email)"
+            android:textColorHint="#766161"
+            android:singleLine="true"
+            android:textColor="@color/colorPrimaryDark"/>
+
+        <EditText
+            android:id="@+id/registPassword"
+            android:layout_width="270dp"
+            android:layout_height="50dp"
+            android:layout_alignLeft="@id/registID"
+            android:layout_below="@id/registID"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/round_textfield"
+            android:paddingLeft="10dp"
+            android:hint="Password"
+            android:textColorHint="#766161"
+            android:singleLine="true"
+            android:textColor="@color/colorPrimaryDark"
+            android:inputType="textPassword"/>
+
+        <EditText
+            android:id="@+id/PasswordConfirm"
+            android:layout_width="270dp"
+            android:layout_height="50dp"
+            android:layout_alignLeft="@id/registPassword"
+            android:layout_below="@id/registPassword"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/round_textfield"
+            android:paddingLeft="10dp"
+            android:hint="Confirm Password"
+            android:textColorHint="#766161"
+            android:singleLine="true"
+            android:textColor="@color/colorPrimaryDark"
+            android:inputType="textPassword"/>
+
+        <Button
+            android:id="@+id/nextBtn"
+            android:layout_width="270dp"
+            android:layout_height="50dp"
+            android:layout_alignLeft="@id/registPassword"
+            android:layout_below="@id/PasswordConfirm"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/roundbutton"
+            android:text="다음"
+            android:textSize="15dp"
+            android:textColor="@color/colorPrimaryDark"/>
+
     </RelativeLayout>
 
 </LinearLayout>
