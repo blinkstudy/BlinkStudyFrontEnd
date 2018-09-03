@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@drawable/background">
+
+
+    <Spinner
+        android:id="@+id/sp_List"
+        android:layout_width="333dp"
+        android:layout_height="30dp"
+        android:entries="@array/List"
+        android:background="@drawable/round_textfield">
+    </Spinner>
+
+    <EditText
+        android:id="@+id/title"
+        android:layout_width="333dp"
+        android:layout_height="64dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/round_textfield"
+        android:hint="제목"
+        android:maxLength="5"
+        android:paddingLeft="10dp"
+        android:privateImeOptions="defaultInputmode=korean"
+        android:singleLine="false"
+        android:textColor="@color/colorPrimaryDark"
+        android:textColorHint="#766161" />
+
+    <EditText
+        android:id="@+id/content"
+        android:layout_width="333dp"
+        android:layout_height="354dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/round_textfield"
+        android:gravity="top"
+        android:hint="내용"
+        android:paddingLeft="10dp"
+        android:paddingTop="10dp"
+        android:privateImeOptions="defaultInputmode=korean"
+        android:scrollHorizontally="true"
+        android:singleLine="false"
+        android:textColor="@color/colorPrimaryDark"
+        android:textColorHint="#766161" />
+
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="333dp"
+        android:layout_height="34dp"
+        android:layout_marginTop="10dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="25dp"
+        android:background="@drawable/roundbutton"
+        android:text="글 제출하기" />
+
+
+</LinearLayout>
