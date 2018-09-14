@@ -1,91 +1,107 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:layout_alignParentStart="true"
+    android:layout_alignParentTop="true">
+            <RelativeLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
-    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true">
+                <Button
+                    android:id="@+id/btn_set"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_toLeftOf="@+id/btn_help"
+                    android:background="@drawable/circlebutton"
+                    android:text="설"
+                    tools:ignore="UnknownId" />
 
-        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@drawable/background"
-            android:gravity="center"
-            android:orientation="vertical">
+                <Button
+                    android:id="@+id/btn_help"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/circlebutton"
+                    android:text="?" />
 
 
-            <Button
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:background="@drawable/roundbutton"
-                android:text="설" />
 
-            <Button
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:background="@drawable/roundbutton"
-                android:text="?" />
+                    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/background"
+                        android:gravity="center"
+                        android:orientation="vertical">
 
-            <TextView
-                android:layout_width="333dp"
-                android:layout_height="60dp"
-                android:background="@drawable/round_textfield"
-                android:gravity="center"
-                android:text="관심분야 재설정"
-                android:textSize="20sp" />
+                        <TextView
+                            android:id="@+id/tex_interestarea"
+                            android:layout_width="333dp"
+                            android:layout_height="60dp"
+                            android:background="@drawable/round_textfield"
+                            android:gravity="center"
+                            android:text="관심분야 재설정"
+                            android:textSize="20sp" />
 
-            <TextView
-                android:layout_width="333dp"
-                android:layout_height="60dp"
-                android:layout_marginTop="20dp"
-                android:background="@drawable/round_textfield"
-                android:gravity="center"
-                android:text="문제출제"
-                android:textSize="20sp" />
+                        <TextView
+                            android:id="@+id/tex_setq"
+                            android:layout_width="333dp"
+                            android:layout_height="60dp"
+                            android:layout_marginTop="20dp"
+                            android:background="@drawable/round_textfield"
+                            android:gravity="center"
+                            android:text="문제출제"
+                            android:textSize="20sp" />
 
-            <TextView
-                android:layout_width="333dp"
-                android:layout_height="60dp"
-                android:layout_marginTop="20dp"
-                android:background="@drawable/round_textfield"
-                android:gravity="center"
-                android:text="계정 관리"
-                android:textSize="20sp" />
+                        <TextView
+                            android:id="@+id/tex_managementa"
+                            android:layout_width="333dp"
+                            android:layout_height="60dp"
+                            android:layout_marginTop="20dp"
+                            android:background="@drawable/round_textfield"
+                            android:gravity="center"
+                            android:text="계정 관리"
+                            android:textSize="20sp" />
 
-            <TextView
-                android:layout_width="333dp"
-                android:layout_height="60dp"
-                android:layout_marginTop="20dp"
-                android:background="@drawable/round_textfield"
-                android:gravity="center"
-                android:text="문의하기"
-                android:textSize="20sp" />
+                        <TextView
+                            android:id="@+id/tex_enquire"
+                            android:layout_width="333dp"
+                            android:layout_height="60dp"
+                            android:layout_marginTop="20dp"
+                            android:background="@drawable/round_textfield"
+                            android:gravity="center"
+                            android:text="문의하기"
+                            android:textSize="20sp" />
 
-            <TextView
-                android:layout_width="333dp"
-                android:layout_height="60dp"
-                android:layout_marginTop="20dp"
-                android:background="@drawable/round_textfield"
-                android:gravity="center"
-                android:text="버그신고"
-                android:textSize="20sp" />
+                        <TextView
+                            android:id="@+id/tex_reportbug"
+                            android:layout_width="333dp"
+                            android:layout_height="60dp"
+                            android:layout_marginTop="20dp"
+                            android:background="@drawable/round_textfield"
+                            android:gravity="center"
+                            android:text="버그신고"
+                            android:textSize="20sp" />
 
-            <TextView
-                android:layout_width="333dp"
-                android:layout_height="60dp"
-                android:layout_marginTop="20dp"
-                android:background="@drawable/round_textfield"
-                android:gravity="center"
-                android:text="이용약관"
-                android:textSize="20sp" />
+                        <TextView
+                            android:id="@+id/tex_terms"
+                            android:layout_width="333dp"
+                            android:layout_height="60dp"
+                            android:layout_marginTop="20dp"
+                            android:background="@drawable/round_textfield"
+                            android:gravity="center"
+                            android:text="이용약관"
+                            android:textSize="20sp" />
 
-        </LinearLayout>
+                    </LinearLayout>
 
-    </ScrollView>
 
-</RelativeLayout>
+
+            </RelativeLayout>
+</ScrollView>
