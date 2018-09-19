@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -26,6 +27,11 @@ public class lockscreen extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.lockscreen);
+
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_SHOW_WHEN_LOCKED
+                | WindowManager.LayoutParams.FLAG_DISMISS_KEYGUARD);
+
+
         Random random = new Random();
 
         tv_question= findViewById(R.id.tv_question);
@@ -67,11 +73,16 @@ public class lockscreen extends AppCompatActivity {
             cnt++;
         }
 
+
+
         tv_question.setText(quest[0]);
         btn_a1.setText(quest[index[0]]);
         btn_a2.setText(quest[index[1]]);
         btn_a3.setText(quest[index[2]]);
         btn_a4.setText(quest[index[3]]);
+
+        //틀린 문제 보내주기
+        final String SendData[]=new String[5];
 
         tv_question.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -114,6 +125,18 @@ public class lockscreen extends AppCompatActivity {
                 {
                     wrong_c++;
                     Toast.makeText(getApplicationContext(), "오답입니다!.", Toast.LENGTH_SHORT).show();
+                    Intent in = new Intent(lockscreen.this ,ListActivity.class);
+                    SendData[0] = tv_question.getText().toString();
+                    SendData[1] = btn_a1.getText().toString();
+                    SendData[2] = btn_a2.getText().toString();
+                    SendData[3] = btn_a3.getText().toString();
+                    SendData[4] = btn_a4.getText().toString();
+                    in.putExtra("tv_question",SendData[0]);
+                    in.putExtra("btn_a1",SendData[1]);
+                    in.putExtra("btn_a1",SendData[2]);
+                    in.putExtra("btn_a1",SendData[3]);
+                    in.putExtra("btn_a1",SendData[4]);
+                    startActivity(in);
                     finish();
                 }
             }
@@ -133,6 +156,18 @@ public class lockscreen extends AppCompatActivity {
                 {
                     wrong_c++;
                     Toast.makeText(getApplicationContext(), "오답입니다!.", Toast.LENGTH_SHORT).show();
+                    Intent in = new Intent(lockscreen.this ,ListActivity.class);
+                    SendData[0] = tv_question.getText().toString();
+                    SendData[1] = btn_a1.getText().toString();
+                    SendData[2] = btn_a2.getText().toString();
+                    SendData[3] = btn_a3.getText().toString();
+                    SendData[4] = btn_a4.getText().toString();
+                    in.putExtra("tv_question",SendData[0]);
+                    in.putExtra("btn_a1",SendData[1]);
+                    in.putExtra("btn_a1",SendData[2]);
+                    in.putExtra("btn_a1",SendData[3]);
+                    in.putExtra("btn_a1",SendData[4]);
+                    startActivity(in);
                     finish();
                 }
             }
@@ -152,6 +187,18 @@ public class lockscreen extends AppCompatActivity {
                 {
                     wrong_c++;
                     Toast.makeText(getApplicationContext(), "오답입니다!.", Toast.LENGTH_SHORT).show();
+                    Intent in = new Intent(lockscreen.this ,ListActivity.class);
+                    SendData[0] = tv_question.getText().toString();
+                    SendData[1] = btn_a1.getText().toString();
+                    SendData[2] = btn_a2.getText().toString();
+                    SendData[3] = btn_a3.getText().toString();
+                    SendData[4] = btn_a4.getText().toString();
+                    in.putExtra("tv_question",SendData[0]);
+                    in.putExtra("btn_a1",SendData[1]);
+                    in.putExtra("btn_a1",SendData[2]);
+                    in.putExtra("btn_a1",SendData[3]);
+                    in.putExtra("btn_a1",SendData[4]);
+                    startActivity(in);
                     finish();
                 }
             }
@@ -171,6 +218,18 @@ public class lockscreen extends AppCompatActivity {
                 {
                     wrong_c++;
                     Toast.makeText(getApplicationContext(), "오답입니다!.", Toast.LENGTH_SHORT).show();
+                    Intent in = new Intent(lockscreen.this ,ListActivity.class);
+                    SendData[0] = tv_question.getText().toString();
+                    SendData[1] = btn_a1.getText().toString();
+                    SendData[2] = btn_a2.getText().toString();
+                    SendData[3] = btn_a3.getText().toString();
+                    SendData[4] = btn_a4.getText().toString();
+                    in.putExtra("tv_question",SendData[0]);
+                    in.putExtra("btn_a1",SendData[1]);
+                    in.putExtra("btn_a1",SendData[2]);
+                    in.putExtra("btn_a1",SendData[3]);
+                    in.putExtra("btn_a1",SendData[4]);
+                    startActivity(in);
                     finish();
                 }
             }
