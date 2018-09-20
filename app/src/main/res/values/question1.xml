@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="q_answer1">
+        <item>서현철 선생님은 잘생겼다.</item>
+        <item>잘생겼다</item>
+        <item>그런것 같다</item>
+        <item>모르겠다</item>
+        <item>아니다</item>
+    </string-array>
+</resources>
