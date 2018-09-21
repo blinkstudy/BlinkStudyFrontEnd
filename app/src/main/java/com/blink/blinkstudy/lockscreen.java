@@ -30,7 +30,7 @@ public class lockscreen extends AppCompatActivity {
 
 
         //기존 잠금화면지우고 앱 띄우는 기능(실패)
-        getWindow().addFlags(WindowManager.LayoutParams.FLAG_SHOW_WHEN_LOCKED/
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_SHOW_WHEN_LOCKED
                 | WindowManager.LayoutParams.FLAG_DISMISS_KEYGUARD);
 
 
@@ -49,7 +49,7 @@ public class lockscreen extends AppCompatActivity {
         //문제와 정답을 파싱해오는 배열
         final String[] quest = getResources().getStringArray(R.array.q_answer1);
 
-        //중복체크(아래 while쪽 까지)
+        //4지선다 정답 중복체크(아래 while쪽 까지)
         for(int i=0; i<4; i++) {
             index[i]=random.nextInt(4)+1;
         }
@@ -101,6 +101,8 @@ public class lockscreen extends AppCompatActivity {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         //오답처리
+                        wrong_c++;
+                        Toast.makeText(getApplicationContext(), "문제를 스킵했습니다!.", Toast.LENGTH_SHORT).show();
                         Intent in = new Intent(lockscreen.this ,ListActivity.class);
                         SendData[0] = tv_question.getText().toString();
                         SendData[1] = btn_a1.getText().toString();
