@@ -1,11 +1,76 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:background="@drawable/background">
 
-    <TextView
-        android:id="@+id/textView"
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="TextView" />
-</LinearLayout>
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/background"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_question"
+            android:layout_width="336dp"
+            android:layout_height="281dp"
+            android:layout_marginTop="13dp"
+            android:background="@drawable/round_textfield"
+            android:gravity="center"
+            android:text="문제를 풀어보세요 많이 어려워요"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/btn_a1"
+            android:layout_width="333dp"
+            android:layout_height="38dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/roundbutton"
+            android:text="" />
+
+        <TextView
+            android:id="@+id/btn_a2"
+            android:layout_width="333dp"
+            android:layout_height="38dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/roundbutton"
+            android:text="" />
+
+        <TextView
+            android:id="@+id/btn_a3"
+            android:layout_width="333dp"
+            android:layout_height="38dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/roundbutton"
+            android:text="" />
+
+        <TextView
+            android:id="@+id/btn_a4"
+            android:layout_width="333dp"
+            android:layout_height="38dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/roundbutton"
+            android:text="" />
+
+        <TextView
+            android:id="@+id/tv_advertisement"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="13dp"
+            android:background="@drawable/advertisement"
+            android:gravity="center"
+            android:text="광고"
+            android:textSize="30sp" />
+
+    </LinearLayout>
+    
+</RelativeLayout>

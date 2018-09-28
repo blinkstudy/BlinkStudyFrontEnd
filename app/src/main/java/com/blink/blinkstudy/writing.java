@@ -53,7 +53,6 @@ public class writing extends AppCompatActivity {
         button.setOnClickListener(new Button.OnClickListener() {//글 제출하기 버튼 클릭 이벤트
             @Override
             public void onClick(View v) {
-            //데이터 이동 테스트 - 나중에 없애고 다른 이벤트를 적용해야함.
                 if(title!=null && content!=null && Type!=null) {
                     Intent in = new Intent(writing.this ,ListActivity.class);
                     String Title = title.getText().toString();
